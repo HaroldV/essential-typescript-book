@@ -14,12 +14,10 @@ class TodoCollection {
             this.nextId++;
         }
         this.itemMap.set(this.nextId, new todoItem_1.TodoItem(this.nextId, task));
-        // this.todoItems.push(new TodoItem(this.nextId, task));
         return this.nextId;
     }
     getTodoById(id) {
         return this.itemMap.get(id);
-        // return this.todoItems.find(item => item.id === id)
     }
     getTodoItems(includeComplete) {
         return [...this.itemMap.values()]
